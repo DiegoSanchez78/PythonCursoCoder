@@ -1,0 +1,180 @@
+
+{% extends 'padre.html' %}
+{% load static %}
+
+{% block title %} Cursos {% endblock %}
+{% block contenidoDeIndex %}
+
+    <section id="Homepage">
+        <div class="container">
+            <div class="row">
+                <div data-scrollreveal="wait 0.5s and then ease-in-out 50px" class="col-md-6 col-md-offset-3">
+
+                    <div class="align-center">
+                        <h2 class="main-text">WELCOME TO TRIDENTA</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div data-scrollreveal="enter from the left 500px" class="col-md-6 col-md-offset-3">
+
+                    <div class="align-center">
+                        <div class="col-md-12 align-center">
+                            <div class="hi-icon-effect-9 hi-icon-effect-9a">
+                                <a href="#Homepage" class="hi-icon  hi-icon-screen"></a>
+                                <a href="#section-about" class="hi-icon  hi-icon-user"></a>
+                                <a href="#section-works" class="hi-icon  hi-icon-images"></a>
+                                <a href="#section-services" class="hi-icon hi-icon-cog"></a>
+                                <a href="#section-contact" class="hi-icon hi-icon-location"></a>
+                            </div>
+                            <br />
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--END HOMEPAGE SECTION-->
+     <h4>Ingresa el curso y camada a registrar</h4>
+     <form action="" method="post">
+        {% csrf_token %} 
+        <table> 
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="Guardar">
+    </form>
+     <!-- ABOUT SECTION-->
+    <section id="section-about" class="section">
+        <div class="container" data-scrollreveal='after 0.30s'>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div>
+                        <h2 class="heading">About Us</h2>
+                        <p class="heading-text">
+                            Sed accumsan venenatis blandit. Duis auctor hendrerit metus, 
+                                a euismod lacus egestas vitae. Sed quis elit eu nisl tincidunt euismod at in risus.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="section bgcolor-whitesmoke">
+        <div class="container" data-scrollreveal='wait 0.10s'>
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="team-member text-center">
+                        <figure class="member-photo">
+                            <img src="{% static 'app1/img/team/team1.png' %}" alt="" /></figure>
+                        <div class="team-detail">
+                            <h4>vehicula quis</h4>
+                            <span class="text-bold">Sed accumsan</span>
+                            <p>
+                                Sed accumsan venenatis blandit. Duis auctor hendrerit metus Sed accumsan venenatis blandit. Duis auctor hendrerit metus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="team-member text-center">
+                        <figure class="member-photo">
+                            <img src="{% static 'app1/img/team/team2.jpg' %}" alt="" /></figure>
+                        <div class="team-detail">
+                            <h4>vehicula quis</h4>
+                            <span class="text-bold">venenatis blandit</span>
+                            <p>
+                                Sed accumsan venenatis blandit. Duis auctor hendrerit metus Sed accumsan venenatis blandit. Duis auctor hendrerit metus 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-1 col-md-6">
+                    <div data-scrollreveal="enter right">
+                        <ul class="timeline">
+                            <li class="time-label">
+                                <span class="bg-orange">Some Of Our Achivements
+                                </span>
+                                <br />
+                                <br />
+                            </li>
+
+                            <li class="time-label">
+                                <span class="bg-light-blue"> Year 2014
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-envelope bg-blue"></i>
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i>20 Feburary</span>
+                                    <h3 class="timeline-header"><a href="#">Sed accumsan</a> hendrerit metus</h3>
+                                    <div class="timeline-body">
+                                        Sed accumsan venenatis blandit. Duis auctor hendrerit metus
+                                    </div>
+                                    <div class='timeline-footer'>
+                                        <a class="btn btn-primary btn-xs">Share</a>
+                                        <a class="btn btn-danger btn-xs">Read More</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-user bg-aqua"></i>
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i>02 January</span>
+                                    <h3 class="timeline-header no-border"><a href="#">Venenatis blandit.</a>  Duis auctor hendrerit metus</h3>
+                                </div>
+                            </li>
+
+                            <li class="time-label">
+                                <span class="bg-green"> Year 2013
+                                </span>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-camera bg-purple"></i>
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i>20 December</span>
+                                    <h3 class="timeline-header"><a href="#">Blandit</a> New Photo Show</h3>
+                                    <div class="timeline-body">
+                                        <img src="{% static 'app1/img/about/imgTime.jpg'%}" alt="" class='margin' />
+                                        <img src="{% static 'app1/img/about/imgTime.jpg'%}" alt="" class='margin' />
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-video-camera bg-maroon"></i>
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i>15 June</span>
+                                    <h3 class="timeline-header"><a href="#">Venenatis blandit</a> New Event</h3>
+                                    <div class="timeline-body">
+                                        <iframe width="300" height="169" src="//www.youtube.com/embed/Ycv5fNd4AeM"></iframe>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-clock-o"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+     <!-- END ABOUT SECTION-->
+     <!-- WORKS SECTION-->
+
+  
+    {% endblock contenidoDeIndex %}
